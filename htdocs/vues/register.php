@@ -1,7 +1,7 @@
 <?php 
 /**
 * Vue : register a new user
-*/
+*/ckrugcygcehkbcegubegr
 ?>
 
 <h1><?= $title; ?></h1>
