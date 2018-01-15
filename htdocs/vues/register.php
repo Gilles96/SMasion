@@ -1,8 +1,8 @@
 <?php 
-if(!empty($_POST['username']))
+if(!empty($_POST['username']) && (!empty($_POST['password']))
 {
-	mysql_connect();
-	mysql_select_db('users');
+	mysqli_connect();
+	mysqli_select_db('users');
 	
 	$password = mysql_real_escape_string(htmlspecialchars($_POST['password']));
 	$password2= mysql_real_escape_string(htmlspecialchars($_POST['password2']));
@@ -32,6 +32,8 @@ if(!empty($_POST['username']))
 <?php echo DisplayAlert($alerte); ?>
 
 <form method="POST" action="">
+	
+	<h2 class="title">Please Register</h2>
 	
 	<label>Username :</label>
 	<input type="text"  name="username" />
